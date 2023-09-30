@@ -35,9 +35,11 @@ export default function App() {
         const cachedQuestions = localStorage.getItem(CACHE_KEY);
         if (cachedQuestions) {
           const parsedQuestions = JSON.parse(cachedQuestions);
-          setQuestions(parsedQuestions.data);
-          setLoading(false);
-          return;
+          if (Date.now() - parsedQuestions.timesamp <= EXPIRATION_TIME) {
+            setQuestions(parsedQuestions.data);
+            setLoading(false);
+            return;
+          }
         }
         const resp = await fetch(QUESTION_URL);
         if (!resp.ok) throw new Error(`HTTP ERROR: ${resp.status}`);

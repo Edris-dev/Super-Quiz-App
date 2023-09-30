@@ -1,0 +1,29 @@
+.gif-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+
+    backdrop-filter: blur(1px);
+    animation: slideIn 0.8s ease forwards;
+  }
+
+  .gifImage {
+    max-width: 30%;
+    max-height: 30%;
+  }
+
+  @keyframes slideIn {
+    from {
+      top: 100%;
+    }
+    to {
+      top: 0;
+    }
+  }

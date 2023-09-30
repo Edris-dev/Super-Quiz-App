@@ -1,0 +1,67 @@
+.wrapper {
+    height: 100%;
+  }
+
+  .avatarImage {
+    max-width: 70%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .timer {
+    position: absolute;
+  }
+
+  .options {
+    display: grid;
+    height: 40%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50%;
+    grid-column-gap: 5%;
+  }
+
+  .custom-radio {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .option-label {
+    justify-content: center;
+    cursor: pointer;
+
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19),
+      0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .options {
+      display: flex;
+      flex-direction: column; /* Display as a single column on mobile devices */
+      align-items: stretch; /* Center items vertically */
+    }
+    .option {
+      margin-bottom: 5%;
+    }
+    .avatarImage {
+      max-width: 100%;
+    }
+  }
+  .custom-radio:checked + label {
+    background-color: #dab6c4;
+  }
+
+  .custom-radio:checked + label.incorrect-label {
+    background-color: #ffa0ac;
+  }
+
+  .custom-radio + label.correct-label {
+    background-color: #b4dc7f;
+  }

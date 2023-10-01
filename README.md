@@ -14,7 +14,12 @@ SuperQuizApp is a web application that allows users to participate in timed mult
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
- ### Prerequisites
+
+### Demo
+
+Check out a live demo here: https://super-quiz-app-48188c65e585.herokuapp.com/
+
+### Prerequisites
 
 - Node.js and npm installed on your machine.
 

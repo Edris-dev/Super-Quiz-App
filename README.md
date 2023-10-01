@@ -1,6 +1,6 @@
 # SuperQuizApp
 
-SuperQuizApp is a web application that allows users to participate in timed multiple-choice quizzes and test their knowledge on various topics.
+SuperQuizApp is a web application that allows users to participate in timed multiple-choice quizzes and test their knowledge on Super Coder.
 
 ## Features
 
